@@ -42,7 +42,10 @@ class UserViewSet(viewsets.ModelViewSet):
         return [IsAuthenticated()]
 
 # ViewSet for Review Management
-class ReviewViewSet(viewsets.ModelViewSet):
+class ReviewViewSet(viewsets.ModelViewSet):   
+    """
+    A viewset for viewing and editing review instances.
+    """
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
     pagination_class = ReviewPagination
